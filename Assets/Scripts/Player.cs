@@ -28,7 +28,7 @@ public class Player : MonoBehaviour {
 
 	public bool isAttack;
 	public bool isReloading = false;
-
+	public bool isInDungeon = true;
 	public float intenceDistance;
 
 	public float attackDelayTime;

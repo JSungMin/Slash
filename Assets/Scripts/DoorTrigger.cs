@@ -7,7 +7,8 @@ public class DoorTrigger : MonoBehaviour {
 	public bool isOpen;
 	public bool isClear;
 
-	public GameObject level;
+	public GameObject inLevel;
+	public GameObject outLevel;
 
 	IEnumerator FadeIn(SpriteRenderer sprite){
 		var alpha = sprite.color.a;
@@ -22,12 +23,18 @@ public class DoorTrigger : MonoBehaviour {
 	public void OnTriggerEnter2D(Collider2D col){
 		if(col.CompareTag("Player")){
 			if (isOpen) {
-				Debug.Log ("Door Open");
-				var sprites = level.GetComponentsInChildren<SpriteRenderer> ();
-				for(int i =0;i<sprites.Length;i++){
-					StartCoroutine ("FadeIn", sprites [i]);
+				if (col.GetComponent<Player> ().isInDungeon) {
+					Debug.Log ("Door Open");
+					var sprites = outLevel.GetComponentsInChildren<SpriteRenderer> ();
+					for (int i = 0; i < sprites.Length; i++) {
+						StartCoroutine ("FadeIn", sprites [i]);
+					}
+					if (col.GetComponent<Player> ().nowLevel == outLevel)
+						col.GetComponent<Player> ().EnterNewLevel (inLevel);
+					else {
+						//col.GetComponent<Player> ().EnterNewLevel (outLevel);
+					}
 				}
-				col.GetComponent<Player> ().EnterNewLevel (level);
 			}
 		}
 	}
