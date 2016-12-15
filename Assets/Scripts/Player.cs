@@ -37,6 +37,26 @@ public class Player : MonoBehaviour {
 	public float staminaHealingDelay;
 	public int staminaHealingAmount;
 
+	public GameObject nowLevel;
+
+	public IEnumerator FadeOut(SpriteRenderer sprite){
+		var alpha = sprite.color.a;
+		while(sprite.color.a>0){
+			yield return null;
+			alpha -= Time.deltaTime;
+			sprite.color = new Color (sprite.color.r,sprite.color.g,sprite.color.b,alpha);
+		}
+		StopCoroutine ("FadeOut");
+	}
+
+	public void EnterNewLevel(GameObject level){
+		var sprites = nowLevel.transform.GetComponentsInChildren<SpriteRenderer> ();
+		for(int i =0;i<sprites.Length;i++){
+			StartCoroutine ("FadeOut", sprites [i]);
+		}
+		nowLevel = level;
+	}
+
 	// Use this for initialization
 	void Start () {
 		attackDelay = AttackDelay (attackDelayTime);
@@ -138,7 +158,7 @@ public class Player : MonoBehaviour {
 			for(int i =0;i<newHit.Length;i++){
 				if (newHit [i].transform.CompareTag ("Wall")) {
 
-					transform.position += -dir*walkDis*Time.deltaTime;
+					transform.position = new Vector3(newHit[i].point.x,newHit[i].point.y,transform.position.z) - dir*walkDis*Time.deltaTime;
 					break;
 				} else {
 					transform.Translate (dir*walkDis*Time.deltaTime);
