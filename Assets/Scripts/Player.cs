@@ -48,13 +48,27 @@ public class Player : MonoBehaviour {
 			dir = (xDir + yDir).normalized;
 		}
 
-		transform.Translate (dir*walkDis*Time.deltaTime);
+		var newHit =Physics2D.RaycastAll (transform.position,dir, walkDis*Time.deltaTime);
+
+		if(newHit.Length!=0){
+			for(int i =0;i<newHit.Length;i++){
+				if (newHit [i].transform.CompareTag ("Wall")) {
+					
+					transform.position += -dir*walkDis*Time.deltaTime;
+					break;
+				} else {
+					transform.Translate (dir*walkDis*Time.deltaTime);
+				}
+			}
+		}
+
 
 		dir = Vector3.zero;
 		xDir = Vector3.zero;
 		yDir = Vector3.zero;
 	}
 
+	RaycastHit2D[] hit;
 	private void MouseInputProcess(){
 		leftMouse = Input.GetMouseButton (0);
 
@@ -64,12 +78,21 @@ public class Player : MonoBehaviour {
 				clickPosition = Camera.main.ScreenToWorldPoint (clickPosition);
 
 				attackDir = (clickPosition - transform.position).normalized;
+				hit = Physics2D.RaycastAll (transform.position, attackDir, attackDis);
 
-				targetPosition = transform.position + attackDir * attackDis;
-
-				targetPosition = new Vector3 (targetPosition.x, targetPosition.y, 0);
-
-				Debug.Log (attackDelay);
+				if(hit.Length!=0){
+					for(int i =0;i<hit.Length;i++){
+						if (hit [i].transform.CompareTag ("Wall")) {
+							if (Vector3.Distance (transform.position, targetPosition) > Vector3.Distance (transform.position, new Vector3 (hit [i].point.x, hit [i].point.y, transform.position.z))) {
+								targetPosition = new Vector3 (hit [i].point.x, hit [i].point.y, targetPosition.z);
+								break;
+							}
+						} else {
+							targetPosition = transform.position + attackDir * attackDis;
+							targetPosition = new Vector3 (targetPosition.x, targetPosition.y, 0);
+						}
+					}
+				}
 
 				isAttack = true;
 				StopCoroutine ("AttackDelay");
@@ -87,12 +110,14 @@ public class Player : MonoBehaviour {
 
 		yield return new WaitForSeconds (time);
 		isReloaing = false;
+		isAttack = false;
 		Debug.Log ("Reloading Finished");
 	}
 
+
 	// Update is called once per frame
 	void Update () {
-		if (!isAttack)
+		if (!isReloaing)
 			KeyInputProcess ();
 		else {
 			transform.position = Vector3.Lerp (transform.position, targetPosition, Time.deltaTime * 20);
@@ -103,5 +128,6 @@ public class Player : MonoBehaviour {
 		if (Vector3.Distance (transform.position, targetPosition) <= intenceDistance) {
 			isAttack = false;
 		}
+		Debug.DrawLine (transform.position, targetPosition,Color.red);
 	}
 }
