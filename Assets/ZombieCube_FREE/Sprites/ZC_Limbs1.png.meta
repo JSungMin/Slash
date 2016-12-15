@@ -1,0 +1,305 @@
+fileFormatVersion: 2
+guid: e85baf9912f8c114086575ecab5186d2
+timeCreated: 1475232058
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ZC_GreenChunk1
+    21300002: ZC_RedChunk1
+    21300004: ZC_Bone1
+    21300006: ZC_GreenChunk2
+    21300008: ZC_Bone2
+    21300010: ZC_Eye
+    21300012: ZC_Brain
+    21300014: ZC_RedChunk2
+    21300016: ZC_Heart
+    21300018: ZC_Lung
+    21300020: ZC_Hand
+    21300022: ZC_GreenChunk3
+    21300024: ZC_RedChunk3
+    21300026: ZC_GreenChunk4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ZC_GreenChunk1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 159
+        width: 77
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 48}
+        - {x: -38.5, y: 39}
+        - {x: -38.5, y: -17}
+        - {x: 7.5, y: -48}
+        - {x: 38.5, y: -48}
+        - {x: 38.5, y: 48}
+    - name: ZC_RedChunk1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 189
+        width: 60
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 32.5}
+        - {x: -30, y: -24.5}
+        - {x: -29, y: -32.5}
+        - {x: 30, y: -32.5}
+        - {x: 30, y: 11.5}
+        - {x: 15, y: 32.5}
+    - name: ZC_Bone1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 182
+        width: 18
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZC_GreenChunk2
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 183
+        width: 92
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 36.5}
+        - {x: -46, y: -4.5}
+        - {x: -12, y: -31.5}
+        - {x: 11, y: -36.5}
+        - {x: 46, y: -36.5}
+        - {x: 46, y: 36.5}
+    - name: ZC_Bone2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 17
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZC_Eye
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 115
+        width: 41
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 18.5}
+        - {x: -20.5, y: 10.5}
+        - {x: -20.5, y: -13.5}
+        - {x: -12.5, y: -18.5}
+        - {x: 19.5, y: -18.5}
+        - {x: 20.5, y: -14.5}
+        - {x: 20.5, y: 14.5}
+        - {x: 16.5, y: 18.5}
+    - name: ZC_Brain
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 124
+        width: 94
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 28}
+        - {x: -47, y: 24}
+        - {x: -47, y: -14}
+        - {x: -37, y: -28}
+        - {x: 37, y: -28}
+        - {x: 47, y: -19}
+        - {x: 47, y: 28}
+    - name: ZC_RedChunk2
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 96
+        width: 66
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 40.5}
+        - {x: -29, y: 30.5}
+        - {x: -33, y: 27.5}
+        - {x: -33, y: 5.5}
+        - {x: -9, y: -39.5}
+        - {x: -7, y: -40.5}
+        - {x: 33, y: -40.5}
+        - {x: 33, y: 40.5}
+    - name: ZC_Heart
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 71
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 16.5}
+        - {x: -18, y: -16.5}
+        - {x: 17, y: -16.5}
+        - {x: 18, y: -13.5}
+        - {x: 18, y: 16.5}
+    - name: ZC_Lung
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 79
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 18.5}
+        - {x: -35, y: 18.5}
+        - {x: -35, y: 7.5}
+        - {x: -19, y: -15.5}
+        - {x: -16, y: -18.5}
+        - {x: 35, y: -18.5}
+        - {x: 35, y: -4.5}
+        - {x: 20, y: 15.5}
+    - name: ZC_Hand
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 18.5}
+        - {x: -18, y: 13.5}
+        - {x: -18, y: -14.5}
+        - {x: -12, y: -18.5}
+        - {x: 18, y: -18.5}
+        - {x: 18, y: 18.5}
+    - name: ZC_GreenChunk3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 78
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39, y: 30}
+        - {x: -39, y: -30}
+        - {x: 31, y: -30}
+        - {x: 39, y: -6}
+        - {x: 39, y: 27}
+        - {x: 24, y: 30}
+    - name: ZC_RedChunk3
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1
+        width: 60
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 34.5}
+        - {x: -30, y: 22.5}
+        - {x: -30, y: -30.5}
+        - {x: -29, y: -34.5}
+        - {x: 15, y: -34.5}
+        - {x: 30, y: -16.5}
+        - {x: 30, y: 25.5}
+        - {x: -2, y: 34.5}
+    - name: ZC_GreenChunk4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 111
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 38}
+        - {x: -55.5, y: 29}
+        - {x: -55.5, y: -7}
+        - {x: -37.5, y: -38}
+        - {x: 55.5, y: -38}
+        - {x: 55.5, y: 38}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

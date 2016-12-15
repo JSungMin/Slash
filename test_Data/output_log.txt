@@ -1,0 +1,135 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 5500 (ID=0x1616)
+    Vendor:   Intel
+    VRAM:     2000 MB
+    Driver:   10.18.14.4029
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.078 seconds
+Platform assembly: C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+The referenced script on this Behaviour (Game Object 'Ef_ExplosionParticleGreen_02') is missing!
+ 
+(Filename:  Line: 1754)
+
+The referenced script on this Behaviour (Game Object 'ZombieCube') is missing!
+ 
+(Filename:  Line: 1754)
+
+UnloadTime: 5.693086 ms
+Read Content : <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Unit>
+	<Field ID="0" NAME="SOM01" HP="1" MP="0" STR="1" DEF="0" DEX="1" SPEED="0.8"/>
+	<Field ID="1" NAME="Zombie01" HP="1" MP="0" STR="1" DEF="0" DEX="1" SPEED="0.3"/>
+	<Field ID="2" NAME="Zombie02" HP="1" MP="0" STR="1" DEF="1" DEX="1" SPEED="0.5"/>
+</Unit>
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Platform assembly: C:\Users\032\Documents\GitHub\SlashHolic\RushAndKill\test_Data\Managed\System.Xml.dll (this message is harmless)
+Player+<AttackDelay>c__Iterator0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Reloading
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Reloading Finished
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Player+<AttackDelay>c__Iterator0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Reloading
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Reloading Finished
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Player+<AttackDelay>c__Iterator0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Reloading
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Reloading Finished
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Player+<AttackDelay>c__Iterator0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Reloading
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Reloading Finished
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Player+<AttackDelay>c__Iterator0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Reloading
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Reloading Finished
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Player+<AttackDelay>c__Iterator0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Reloading
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Reloading Finished
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Player+<AttackDelay>c__Iterator0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Reloading
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Reloading Finished
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 3dec -> priority: 1 

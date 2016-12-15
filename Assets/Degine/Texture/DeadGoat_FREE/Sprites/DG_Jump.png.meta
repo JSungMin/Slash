@@ -1,0 +1,660 @@
+fileFormatVersion: 2
+guid: 3d0bac8b88348ff47bbd85e7285429db
+timeCreated: 1478738467
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: InAir_DG_12
+    21300002: Landing_DG_18
+    21300004: InAir_DG_07
+    21300006: InAir_DG_10
+    21300008: InAir_DG_15
+    21300010: InAir_DG_11
+    21300012: Landing_DG_20
+    21300014: Landing_DG_21
+    21300016: InAir_DG_14
+    21300018: Landing_DG_16
+    21300020: Landing_DG_19
+    21300022: _Jump_DG_05
+    21300024: _Jump_DG_02
+    21300026: _Jump_DG_03
+    21300028: _Jump_DG_04
+    21300030: _Jump_DG_06
+    21300032: Landing_DG_17
+    21300034: InAir_DG_09
+    21300036: InAir_DG_13
+    21300038: _Jump_DG_01
+    21300040: InAir_DG_08
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: InAir_DG_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 47}
+        - {x: -49, y: 26}
+        - {x: -51, y: -6}
+        - {x: -11, y: -26}
+        - {x: -13, y: -13}
+        - {x: -22, y: -4}
+        - {x: -21, y: 1}
+        - {x: -25, y: 3}
+        - {x: -23, y: 7}
+        - {x: -18, y: -6}
+        - {x: -17, y: -9}
+        - {x: -2, y: -8}
+        - {x: -13, y: -39}
+        - {x: -59, y: -31}
+        - {x: -66, y: -32}
+        - {x: -66, y: -128}
+        - {x: 38, y: -128}
+        - {x: 67, y: -43}
+        - {x: 67, y: 26}
+        - {x: 21, y: 47}
+    - name: Landing_DG_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 257
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: 50}
+        - {x: -25, y: 50}
+        - {x: -57, y: 41}
+        - {x: -46, y: 5}
+        - {x: -26, y: -18}
+        - {x: -14, y: -12}
+        - {x: -16, y: -7}
+        - {x: -25, y: 10}
+        - {x: -22, y: 12}
+        - {x: -19, y: -1}
+        - {x: -17, y: -3}
+        - {x: -2, y: -24}
+        - {x: -61, y: -30}
+        - {x: -64, y: -32}
+        - {x: -64, y: -98}
+        - {x: -62, y: -128}
+        - {x: 21, y: -128}
+        - {x: 67, y: -30}
+        - {x: 67, y: 15}
+    - name: InAir_DG_07
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 514
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: 47}
+        - {x: -66, y: 47}
+        - {x: -66, y: -128}
+        - {x: 10, y: -128}
+        - {x: 27, y: -119}
+        - {x: 67, y: -32}
+        - {x: 67, y: 28}
+    - name: InAir_DG_10
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 47}
+        - {x: -49, y: 26}
+        - {x: -51, y: -6}
+        - {x: -11, y: -26}
+        - {x: -13, y: -13}
+        - {x: -22, y: -4}
+        - {x: -21, y: 1}
+        - {x: -25, y: 3}
+        - {x: -23, y: 7}
+        - {x: -18, y: -6}
+        - {x: -17, y: -9}
+        - {x: -2, y: -8}
+        - {x: -13, y: -39}
+        - {x: -59, y: -31}
+        - {x: -66, y: -32}
+        - {x: -66, y: -128}
+        - {x: 38, y: -128}
+        - {x: 67, y: -43}
+        - {x: 67, y: 26}
+        - {x: 21, y: 47}
+    - name: InAir_DG_15
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 257
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: 47}
+        - {x: -66, y: 47}
+        - {x: -66, y: -128}
+        - {x: 10, y: -128}
+        - {x: 27, y: -119}
+        - {x: 67, y: -32}
+        - {x: 67, y: 28}
+    - name: InAir_DG_11
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 514
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: 47}
+        - {x: -66, y: 47}
+        - {x: -66, y: -128}
+        - {x: 10, y: -128}
+        - {x: 27, y: -119}
+        - {x: 67, y: -32}
+        - {x: 67, y: 28}
+    - name: Landing_DG_20
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 50}
+        - {x: -30, y: 44}
+        - {x: -42, y: 38}
+        - {x: -39, y: -2}
+        - {x: -23, y: -11}
+        - {x: -16, y: -8}
+        - {x: -18, y: 0}
+        - {x: -21, y: 5}
+        - {x: -20, y: 4}
+        - {x: -18, y: 0}
+        - {x: -6, y: -3}
+        - {x: -13, y: -40}
+        - {x: -61, y: -29}
+        - {x: -66, y: -31}
+        - {x: -66, y: -83}
+        - {x: -60, y: -128}
+        - {x: 28, y: -128}
+        - {x: 65, y: -76}
+        - {x: 65, y: 14}
+        - {x: 26, y: 50}
+    - name: Landing_DG_21
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 257
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 50}
+        - {x: -16, y: 50}
+        - {x: -40, y: 45}
+        - {x: -43, y: 24}
+        - {x: -36, y: -6}
+        - {x: -18, y: -9}
+        - {x: -16, y: -1}
+        - {x: -20, y: 3}
+        - {x: -9, y: -2}
+        - {x: -18, y: -34}
+        - {x: -63, y: -26}
+        - {x: -63, y: -128}
+        - {x: 26, y: -128}
+        - {x: 66, y: -50}
+        - {x: 66, y: -9}
+        - {x: 27, y: 48}
+    - name: InAir_DG_14
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 514
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 47}
+        - {x: -49, y: 26}
+        - {x: -51, y: -6}
+        - {x: -11, y: -26}
+        - {x: -13, y: -13}
+        - {x: -22, y: -4}
+        - {x: -21, y: 1}
+        - {x: -25, y: 3}
+        - {x: -23, y: 7}
+        - {x: -18, y: -6}
+        - {x: -17, y: -9}
+        - {x: -2, y: -8}
+        - {x: -13, y: -39}
+        - {x: -59, y: -31}
+        - {x: -66, y: -32}
+        - {x: -66, y: -128}
+        - {x: 38, y: -128}
+        - {x: 67, y: -43}
+        - {x: 67, y: 26}
+        - {x: 21, y: 47}
+    - name: Landing_DG_16
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 50}
+        - {x: -65, y: 50}
+        - {x: -65, y: -128}
+        - {x: 17, y: -128}
+        - {x: 29, y: -125}
+        - {x: 67, y: -18}
+        - {x: 67, y: 13}
+    - name: Landing_DG_19
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 257
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 50}
+        - {x: -42, y: 50}
+        - {x: -49, y: 38}
+        - {x: -34, y: -18}
+        - {x: -17, y: -12}
+        - {x: -14, y: -8}
+        - {x: -14, y: -4}
+        - {x: -16, y: -2}
+        - {x: -19, y: -1}
+        - {x: -24, y: 8}
+        - {x: -20, y: 2}
+        - {x: -17, y: -1}
+        - {x: -2, y: -9}
+        - {x: -64, y: -27}
+        - {x: -64, y: -128}
+        - {x: 14, y: -128}
+        - {x: 17, y: -123}
+        - {x: 66, y: -25}
+        - {x: 66, y: 29}
+    - name: _Jump_DG_05
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 514
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: -121}
+        - {x: 67, y: -31}
+        - {x: 67, y: 12}
+        - {x: 19, y: 50}
+        - {x: -8, y: 50}
+        - {x: -49, y: 33}
+        - {x: -43, y: 3}
+        - {x: -32, y: -14}
+        - {x: -14, y: -16}
+        - {x: -14, y: -7}
+        - {x: -16, y: -6}
+        - {x: -18, y: -6}
+        - {x: -8, y: -6}
+        - {x: -13, y: -40}
+        - {x: -63, y: -25}
+        - {x: -66, y: -29}
+        - {x: -66, y: -89}
+        - {x: -63, y: -125}
+        - {x: -59, y: -128}
+        - {x: -42, y: -128}
+        - {x: -39, y: -127}
+        - {x: -36, y: -124}
+        - {x: -17, y: -128}
+        - {x: 4, y: -128}
+    - name: _Jump_DG_02
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 50}
+        - {x: -30, y: 44}
+        - {x: -42, y: 38}
+        - {x: -39, y: -2}
+        - {x: -23, y: -11}
+        - {x: -16, y: -8}
+        - {x: -18, y: 0}
+        - {x: -21, y: 5}
+        - {x: -20, y: 4}
+        - {x: -18, y: 0}
+        - {x: -6, y: -3}
+        - {x: -13, y: -40}
+        - {x: -61, y: -29}
+        - {x: -66, y: -31}
+        - {x: -66, y: -83}
+        - {x: -60, y: -128}
+        - {x: 28, y: -128}
+        - {x: 65, y: -76}
+        - {x: 65, y: 14}
+        - {x: 26, y: 50}
+    - name: _Jump_DG_03
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 50}
+        - {x: -42, y: 50}
+        - {x: -49, y: 38}
+        - {x: -34, y: -18}
+        - {x: -17, y: -12}
+        - {x: -14, y: -8}
+        - {x: -14, y: -4}
+        - {x: -16, y: -2}
+        - {x: -19, y: -1}
+        - {x: -24, y: 8}
+        - {x: -20, y: 2}
+        - {x: -17, y: -1}
+        - {x: -2, y: -9}
+        - {x: -64, y: -27}
+        - {x: -64, y: -128}
+        - {x: 14, y: -128}
+        - {x: 17, y: -123}
+        - {x: 66, y: -25}
+        - {x: 66, y: 29}
+    - name: _Jump_DG_04
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: 50}
+        - {x: -25, y: 50}
+        - {x: -57, y: 41}
+        - {x: -46, y: 5}
+        - {x: -26, y: -18}
+        - {x: -14, y: -12}
+        - {x: -16, y: -7}
+        - {x: -25, y: 10}
+        - {x: -22, y: 12}
+        - {x: -19, y: -1}
+        - {x: -17, y: -3}
+        - {x: -2, y: -24}
+        - {x: -61, y: -30}
+        - {x: -64, y: -32}
+        - {x: -64, y: -98}
+        - {x: -62, y: -128}
+        - {x: 21, y: -128}
+        - {x: 67, y: -30}
+        - {x: 67, y: 15}
+    - name: _Jump_DG_06
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 257
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 50}
+        - {x: -65, y: 50}
+        - {x: -65, y: -128}
+        - {x: 17, y: -128}
+        - {x: 29, y: -125}
+        - {x: 67, y: -18}
+        - {x: 67, y: 13}
+    - name: Landing_DG_17
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 514
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: -121}
+        - {x: 67, y: -31}
+        - {x: 67, y: 12}
+        - {x: 19, y: 50}
+        - {x: -8, y: 50}
+        - {x: -49, y: 33}
+        - {x: -43, y: 3}
+        - {x: -32, y: -14}
+        - {x: -14, y: -16}
+        - {x: -14, y: -7}
+        - {x: -16, y: -6}
+        - {x: -18, y: -6}
+        - {x: -8, y: -6}
+        - {x: -13, y: -40}
+        - {x: -63, y: -25}
+        - {x: -66, y: -29}
+        - {x: -66, y: -89}
+        - {x: -63, y: -125}
+        - {x: -59, y: -128}
+        - {x: -42, y: -128}
+        - {x: -39, y: -127}
+        - {x: -36, y: -124}
+        - {x: -17, y: -128}
+        - {x: 4, y: -128}
+    - name: InAir_DG_09
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 257
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 47}
+        - {x: -49, y: 26}
+        - {x: -51, y: -6}
+        - {x: -11, y: -26}
+        - {x: -13, y: -13}
+        - {x: -22, y: -4}
+        - {x: -21, y: 1}
+        - {x: -25, y: 3}
+        - {x: -19, y: 4}
+        - {x: -20, y: -6}
+        - {x: -17, y: -7}
+        - {x: -3, y: -11}
+        - {x: -16, y: -35}
+        - {x: -66, y: -31}
+        - {x: -66, y: -128}
+        - {x: 35, y: -128}
+        - {x: 38, y: -127}
+        - {x: 67, y: -43}
+        - {x: 67, y: 26}
+        - {x: 21, y: 47}
+    - name: InAir_DG_13
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 257
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 47}
+        - {x: -49, y: 26}
+        - {x: -51, y: -6}
+        - {x: -11, y: -26}
+        - {x: -13, y: -13}
+        - {x: -22, y: -4}
+        - {x: -21, y: 1}
+        - {x: -25, y: 3}
+        - {x: -19, y: 4}
+        - {x: -20, y: -6}
+        - {x: -17, y: -7}
+        - {x: -3, y: -11}
+        - {x: -16, y: -35}
+        - {x: -66, y: -31}
+        - {x: -66, y: -128}
+        - {x: 35, y: -128}
+        - {x: 38, y: -127}
+        - {x: 67, y: -43}
+        - {x: 67, y: 26}
+        - {x: 21, y: 47}
+    - name: _Jump_DG_01
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 514
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 50}
+        - {x: -16, y: 50}
+        - {x: -40, y: 45}
+        - {x: -43, y: 24}
+        - {x: -36, y: -6}
+        - {x: -18, y: -9}
+        - {x: -16, y: -1}
+        - {x: -20, y: 3}
+        - {x: -9, y: -2}
+        - {x: -18, y: -34}
+        - {x: -63, y: -26}
+        - {x: -63, y: -128}
+        - {x: 26, y: -128}
+        - {x: 66, y: -50}
+        - {x: 66, y: -9}
+        - {x: 27, y: 48}
+    - name: InAir_DG_08
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 514
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 47}
+        - {x: -49, y: 26}
+        - {x: -51, y: -6}
+        - {x: -11, y: -26}
+        - {x: -13, y: -13}
+        - {x: -22, y: -4}
+        - {x: -21, y: 1}
+        - {x: -25, y: 3}
+        - {x: -23, y: 7}
+        - {x: -18, y: -6}
+        - {x: -17, y: -9}
+        - {x: -2, y: -8}
+        - {x: -13, y: -39}
+        - {x: -59, y: -31}
+        - {x: -66, y: -32}
+        - {x: -66, y: -128}
+        - {x: 38, y: -128}
+        - {x: 67, y: -43}
+        - {x: 67, y: 26}
+        - {x: 21, y: 47}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

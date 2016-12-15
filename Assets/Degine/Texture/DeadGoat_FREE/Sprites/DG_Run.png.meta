@@ -1,0 +1,527 @@
+fileFormatVersion: 2
+guid: 8353528a3b07f7442820e97efaf0b12c
+timeCreated: 1478738458
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Run_DG_12
+    21300002: Run_DG_15
+    21300004: Run_DG_02
+    21300006: Run_DG_alt_02
+    21300008: Run_DG_07
+    21300010: Run_DG_05
+    21300012: Run_DG_01
+    21300014: Run_DG_14
+    21300016: Run_DG_13
+    21300018: Run_DG_10
+    21300020: Run_DG_alt_01
+    21300022: Run_DG_11
+    21300024: Run_DG_04
+    21300026: Run_DG_06
+    21300028: Run_DG_03
+    21300030: Run_DG_09
+    21300032: Run_DG_08
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Run_DG_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37, y: 12}
+        - {x: -20, y: -9}
+        - {x: -62, y: -27}
+        - {x: -63, y: -27}
+        - {x: -63, y: -127}
+        - {x: 57, y: -127}
+        - {x: 66, y: -111}
+        - {x: 66, y: 21}
+        - {x: 42, y: 51}
+        - {x: -28, y: 51}
+        - {x: -38, y: 49}
+    - name: Run_DG_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 257
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43, y: 24}
+        - {x: -36, y: -6}
+        - {x: -18, y: -9}
+        - {x: -16, y: -1}
+        - {x: -20, y: 3}
+        - {x: -3, y: -11}
+        - {x: -65, y: -25}
+        - {x: -65, y: -128}
+        - {x: 66, y: -128}
+        - {x: 66, y: 50}
+        - {x: -28, y: 50}
+        - {x: -40, y: 45}
+    - name: Run_DG_02
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 514
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: 40}
+        - {x: 16, y: 51}
+        - {x: -38, y: 51}
+        - {x: -43, y: 1}
+        - {x: -28, y: -6}
+        - {x: -20, y: -7}
+        - {x: -18, y: 1}
+        - {x: -22, y: 6}
+        - {x: -22, y: 12}
+        - {x: -22, y: 6}
+        - {x: -8, y: -2}
+        - {x: -13, y: -36}
+        - {x: -66, y: -31}
+        - {x: -66, y: -84}
+        - {x: -54, y: -128}
+        - {x: 19, y: -128}
+        - {x: 63, y: -28}
+        - {x: 63, y: -4}
+    - name: Run_DG_alt_02
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: 40}
+        - {x: 16, y: 51}
+        - {x: -38, y: 51}
+        - {x: -43, y: 1}
+        - {x: -28, y: -6}
+        - {x: -20, y: -7}
+        - {x: -18, y: 1}
+        - {x: -22, y: 6}
+        - {x: -22, y: 12}
+        - {x: -22, y: 6}
+        - {x: -8, y: -2}
+        - {x: -13, y: -36}
+        - {x: -66, y: -31}
+        - {x: -66, y: -84}
+        - {x: -54, y: -128}
+        - {x: 19, y: -128}
+        - {x: 63, y: -28}
+        - {x: 63, y: -4}
+    - name: Run_DG_07
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 257
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 54}
+        - {x: -34, y: 53}
+        - {x: -42, y: 10}
+        - {x: -25, y: -2}
+        - {x: -19, y: -4}
+        - {x: -16, y: 9}
+        - {x: -22, y: 13}
+        - {x: -15, y: 10}
+        - {x: -9, y: 1}
+        - {x: -62, y: -26}
+        - {x: -66, y: -27}
+        - {x: -66, y: -117}
+        - {x: -64, y: -126}
+        - {x: 24, y: -126}
+        - {x: 62, y: -52}
+        - {x: 62, y: 13}
+        - {x: 23, y: 54}
+    - name: Run_DG_05
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 514
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: 54}
+        - {x: -50, y: 15}
+        - {x: -35, y: -2}
+        - {x: -25, y: -2}
+        - {x: -23, y: 0}
+        - {x: -23, y: 4}
+        - {x: -12, y: 2}
+        - {x: -7, y: 2}
+        - {x: -68, y: -18}
+        - {x: -68, y: -84}
+        - {x: -61, y: -126}
+        - {x: 22, y: -126}
+        - {x: 59, y: -17}
+        - {x: 59, y: -7}
+        - {x: 17, y: 54}
+    - name: Run_DG_01
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 66, y: -41}
+        - {x: 66, y: -9}
+        - {x: 27, y: 48}
+        - {x: 24, y: 50}
+        - {x: -16, y: 50}
+        - {x: -40, y: 45}
+        - {x: -43, y: 24}
+        - {x: -36, y: -6}
+        - {x: -18, y: -9}
+        - {x: -16, y: -1}
+        - {x: -20, y: 3}
+        - {x: -3, y: -11}
+        - {x: -65, y: -25}
+        - {x: -65, y: -113}
+        - {x: -52, y: -128}
+        - {x: 8, y: -128}
+        - {x: 16, y: -121}
+        - {x: 16, y: -102}
+    - name: Run_DG_14
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 257
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: -14}
+        - {x: -13, y: -5}
+        - {x: -14, y: 0}
+        - {x: -16, y: 2}
+        - {x: -17, y: 2}
+        - {x: -18, y: 4}
+        - {x: -16, y: 2}
+        - {x: -12, y: 2}
+        - {x: -12, y: -39}
+        - {x: -64, y: -26}
+        - {x: -64, y: -112}
+        - {x: -56, y: -128}
+        - {x: 65, y: -128}
+        - {x: 65, y: 50}
+        - {x: -30, y: 50}
+        - {x: -47, y: 27}
+        - {x: -45, y: 9}
+    - name: Run_DG_13
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 514
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 50}
+        - {x: -41, y: 19}
+        - {x: -30, y: -9}
+        - {x: -19, y: -10}
+        - {x: -13, y: 1}
+        - {x: -18, y: 6}
+        - {x: -18, y: 16}
+        - {x: -18, y: 8}
+        - {x: -16, y: 6}
+        - {x: -7, y: -1}
+        - {x: -16, y: -38}
+        - {x: -62, y: -30}
+        - {x: -66, y: -35}
+        - {x: -66, y: -67}
+        - {x: -59, y: -125}
+        - {x: -57, y: -128}
+        - {x: 66, y: -128}
+        - {x: 66, y: 50}
+    - name: Run_DG_10
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 54}
+        - {x: -34, y: 38}
+        - {x: -33, y: 6}
+        - {x: -12, y: -5}
+        - {x: -9, y: 3}
+        - {x: -10, y: 8}
+        - {x: -14, y: 12}
+        - {x: -10, y: 9}
+        - {x: 1, y: -1}
+        - {x: -7, y: -37}
+        - {x: -62, y: -18}
+        - {x: -62, y: -126}
+        - {x: 37, y: -126}
+        - {x: 68, y: -46}
+        - {x: 68, y: -5}
+        - {x: 29, y: 54}
+    - name: Run_DG_alt_01
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 257
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 66, y: -41}
+        - {x: 66, y: -9}
+        - {x: 27, y: 48}
+        - {x: 24, y: 50}
+        - {x: -16, y: 50}
+        - {x: -40, y: 45}
+        - {x: -43, y: 24}
+        - {x: -36, y: -6}
+        - {x: -18, y: -9}
+        - {x: -16, y: -1}
+        - {x: -20, y: 3}
+        - {x: -3, y: -11}
+        - {x: -65, y: -25}
+        - {x: -65, y: -113}
+        - {x: -52, y: -128}
+        - {x: 8, y: -128}
+        - {x: 16, y: -121}
+        - {x: 16, y: -102}
+    - name: Run_DG_11
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 514
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32, y: 51}
+        - {x: -26, y: 51}
+        - {x: -33, y: 37}
+        - {x: -36, y: 0}
+        - {x: -13, y: -7}
+        - {x: -62, y: -20}
+        - {x: -62, y: -127}
+        - {x: 3, y: -127}
+        - {x: 18, y: -121}
+        - {x: 67, y: -32}
+        - {x: 67, y: -12}
+        - {x: 50, y: 27}
+    - name: Run_DG_04
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39, y: 30}
+        - {x: 14, y: 54}
+        - {x: -37, y: 54}
+        - {x: -65, y: 10}
+        - {x: -24, y: -6}
+        - {x: -20, y: -2}
+        - {x: -21, y: 5}
+        - {x: -26, y: 12}
+        - {x: -25, y: 10}
+        - {x: -17, y: 3}
+        - {x: -17, y: -34}
+        - {x: -64, y: -28}
+        - {x: -67, y: -34}
+        - {x: -67, y: -127}
+        - {x: 12, y: -127}
+        - {x: 13, y: -126}
+        - {x: 60, y: -35}
+        - {x: 60, y: -6}
+    - name: Run_DG_06
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: 54}
+        - {x: -56, y: 50}
+        - {x: -46, y: 13}
+        - {x: -27, y: -5}
+        - {x: -19, y: 0}
+        - {x: -22, y: 9}
+        - {x: -24, y: 13}
+        - {x: -8, y: 1}
+        - {x: -66, y: -29}
+        - {x: -66, y: -126}
+        - {x: 27, y: -126}
+        - {x: 60, y: -61}
+        - {x: 60, y: 23}
+        - {x: 37, y: 54}
+    - name: Run_DG_03
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 54}
+        - {x: -44, y: 50}
+        - {x: -43, y: -4}
+        - {x: -20, y: -8}
+        - {x: -19, y: 2}
+        - {x: -22, y: 4}
+        - {x: -22, y: 12}
+        - {x: -23, y: 14}
+        - {x: -22, y: 16}
+        - {x: -22, y: 8}
+        - {x: -21, y: 5}
+        - {x: -7, y: -3}
+        - {x: -67, y: -30}
+        - {x: -67, y: -86}
+        - {x: -62, y: -128}
+        - {x: 26, y: -128}
+        - {x: 61, y: -96}
+        - {x: 61, y: 22}
+        - {x: 20, y: 54}
+    - name: Run_DG_09
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 257
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 54}
+        - {x: -58, y: 12}
+        - {x: -62, y: -14}
+        - {x: -62, y: -125}
+        - {x: 22, y: -125}
+        - {x: 66, y: -59}
+        - {x: 66, y: 19}
+        - {x: 33, y: 54}
+    - name: Run_DG_08
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 514
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 54}
+        - {x: -45, y: 1}
+        - {x: -19, y: -3}
+        - {x: -15, y: 0}
+        - {x: -16, y: 8}
+        - {x: -1, y: -20}
+        - {x: -66, y: -24}
+        - {x: -66, y: -112}
+        - {x: -64, y: -125}
+        - {x: -39, y: -125}
+        - {x: -38, y: -124}
+        - {x: -34, y: -117}
+        - {x: -14, y: -125}
+        - {x: 17, y: -125}
+        - {x: 64, y: -33}
+        - {x: 64, y: -2}
+        - {x: 28, y: 54}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
