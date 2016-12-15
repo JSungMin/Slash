@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+	public GameObject arrow;
+
 	public float walkDis;
 	public float attackDis;
+
+	public int hp=100;
+	public int maxHp;
+
+	public int stamina= 100;
+	public int maxStamina;
 
 	public Vector3 dir;
 
@@ -19,15 +27,39 @@ public class Player : MonoBehaviour {
 	public Vector3 targetPosition;
 
 	public bool isAttack;
-	public bool isReloaing = false;
+	public bool isReloading = false;
 
 	public float intenceDistance;
 
 	public float attackDelayTime;
 
+	public IEnumerator autoHealingStamina;
+	public float staminaHealingDelay;
+	public int staminaHealingAmount;
+
 	// Use this for initialization
 	void Start () {
 		attackDelay = AttackDelay (attackDelayTime);
+		autoHealingStamina = AutoHealingStamina (staminaHealingDelay);
+
+		StartCoroutine (autoHealingStamina);
+	}
+
+	public IEnumerator AutoHealingStamina(float time){
+		while (true) {
+			yield return new WaitForSeconds (time);
+			Debug.Log ("Healing");
+			if(stamina + staminaHealingAmount <=maxStamina)
+				stamina += staminaHealingAmount;
+		}
+	}
+
+	public bool DecreaseStamina(int amount){
+		if (stamina - amount >= 0) {
+			stamina -= amount;
+			return true;
+		}
+		return false;
 	}
 
 	private void KeyInputProcess(){
@@ -69,14 +101,23 @@ public class Player : MonoBehaviour {
 	}
 
 	RaycastHit2D[] hit;
+
+	public float radius;
+
 	private void MouseInputProcess(){
 		leftMouse = Input.GetMouseButton (0);
 
-		if (leftMouse) {
-			if (!isReloaing) {
-				clickPosition = Input.mousePosition;
-				clickPosition = Camera.main.ScreenToWorldPoint (clickPosition);
 
+		clickPosition = Input.mousePosition;
+		clickPosition = Camera.main.ScreenToWorldPoint (clickPosition);
+
+		var tmpDir = (clickPosition - transform.position);
+		float angle = Mathf.Atan2 (tmpDir.x,tmpDir.y)*Mathf.Rad2Deg;
+
+		arrow.transform.localRotation = Quaternion.AngleAxis(angle - 90,Vector3.back);
+		arrow.transform.localScale = Vector3.one * Mathf.Clamp (Vector3.Distance (transform.position, clickPosition)-13, 2, 4);
+		if (leftMouse) {
+			if (!isReloading&&DecreaseStamina(5)) {
 				attackDir = (clickPosition - transform.position).normalized;
 				hit = Physics2D.RaycastAll (transform.position, attackDir, attackDis);
 
@@ -104,12 +145,12 @@ public class Player : MonoBehaviour {
 	IEnumerator attackDelay;
 
 	public IEnumerator AttackDelay(float time){
-		isReloaing = true;
+		isReloading = true;
 
 		Debug.Log ("Reloading");
 
 		yield return new WaitForSeconds (time);
-		isReloaing = false;
+		isReloading = false;
 		isAttack = false;
 		Debug.Log ("Reloading Finished");
 	}
@@ -117,7 +158,7 @@ public class Player : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (!isReloaing)
+		if (!isReloading)
 			KeyInputProcess ();
 		else {
 			transform.position = Vector3.Lerp (transform.position, targetPosition, Time.deltaTime * 20);
