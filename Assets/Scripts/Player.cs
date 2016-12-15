@@ -22,7 +22,7 @@ public class Player : MonoBehaviour {
 
 	public bool leftMouse;
 
-	public Vector3 clickPosition;
+	public Vector3 mouseInputPosition;
 	public Vector3 attackDir;
 	public Vector3 targetPosition;
 
@@ -61,6 +61,58 @@ public class Player : MonoBehaviour {
 		}
 		return false;
 	}
+		
+	public void CalculateArrow(Vector3 mPosition){
+		var tmpDir = (mPosition - transform.position);
+		float angle = Mathf.Atan2 (tmpDir.x,tmpDir.y)*Mathf.Rad2Deg;
+
+		arrow.transform.localRotation = Quaternion.AngleAxis(angle - 90,Vector3.back);
+		arrow.transform.localScale = Vector3.one * Mathf.Clamp (Vector3.Distance (transform.position, mouseInputPosition)-14, 2, 4);
+	}
+
+	public void CalculateMousePosition(Vector3 mPosition){
+		mouseInputPosition = mPosition;
+		mouseInputPosition = Camera.main.ScreenToWorldPoint (mouseInputPosition);
+	}
+
+	public bool CheckTargetPosition(){
+		hit = Physics2D.RaycastAll (transform.position, attackDir, attackDis);
+		if(hit.Length!=0){
+			for(int i =0;i<hit.Length;i++){
+				if (hit [i].transform.CompareTag ("Wall")) {
+					if (Vector3.Distance (transform.position, targetPosition) > Vector3.Distance (transform.position, new Vector3 (hit [i].point.x, hit [i].point.y, transform.position.z))) {
+						targetPosition = new Vector3 (hit [i].point.x, hit [i].point.y, targetPosition.z);
+						return true;
+					}
+				} else {
+					targetPosition = transform.position + attackDir * attackDis;
+					targetPosition = new Vector3 (targetPosition.x, targetPosition.y, 0);
+				}
+			}
+		}
+		return false;
+	}
+
+	RaycastHit2D[] hit;
+
+	private void MouseInputProcess(){
+		leftMouse = Input.GetMouseButton (0);
+
+		CalculateMousePosition (Input.mousePosition);
+		CalculateArrow (mouseInputPosition);
+
+		if (leftMouse) {
+			if (!isReloading&&DecreaseStamina(5)) {
+				attackDir = (mouseInputPosition - transform.position).normalized;
+
+				var isCollisionWithWall = CheckTargetPosition ();
+
+				isAttack = true;
+				StopCoroutine ("AttackDelay");
+				StartCoroutine ("AttackDelay",attackDelayTime);
+			}
+		}
+	}
 
 	private void KeyInputProcess(){
 		if(Input.GetKey(KeyCode.A)){
@@ -80,12 +132,12 @@ public class Player : MonoBehaviour {
 			dir = (xDir + yDir).normalized;
 		}
 
-		var newHit =Physics2D.RaycastAll (transform.position,dir, walkDis*Time.deltaTime);
+		var newHit = Physics2D.RaycastAll (transform.position,dir, walkDis*Time.deltaTime);
 
 		if(newHit.Length!=0){
 			for(int i =0;i<newHit.Length;i++){
 				if (newHit [i].transform.CompareTag ("Wall")) {
-					
+
 					transform.position += -dir*walkDis*Time.deltaTime;
 					break;
 				} else {
@@ -94,52 +146,9 @@ public class Player : MonoBehaviour {
 			}
 		}
 
-
 		dir = Vector3.zero;
 		xDir = Vector3.zero;
 		yDir = Vector3.zero;
-	}
-
-	RaycastHit2D[] hit;
-
-	public float radius;
-
-	private void MouseInputProcess(){
-		leftMouse = Input.GetMouseButton (0);
-
-
-		clickPosition = Input.mousePosition;
-		clickPosition = Camera.main.ScreenToWorldPoint (clickPosition);
-
-		var tmpDir = (clickPosition - transform.position);
-		float angle = Mathf.Atan2 (tmpDir.x,tmpDir.y)*Mathf.Rad2Deg;
-
-		arrow.transform.localRotation = Quaternion.AngleAxis(angle - 90,Vector3.back);
-		arrow.transform.localScale = Vector3.one * Mathf.Clamp (Vector3.Distance (transform.position, clickPosition)-13, 2, 4);
-		if (leftMouse) {
-			if (!isReloading&&DecreaseStamina(5)) {
-				attackDir = (clickPosition - transform.position).normalized;
-				hit = Physics2D.RaycastAll (transform.position, attackDir, attackDis);
-
-				if(hit.Length!=0){
-					for(int i =0;i<hit.Length;i++){
-						if (hit [i].transform.CompareTag ("Wall")) {
-							if (Vector3.Distance (transform.position, targetPosition) > Vector3.Distance (transform.position, new Vector3 (hit [i].point.x, hit [i].point.y, transform.position.z))) {
-								targetPosition = new Vector3 (hit [i].point.x, hit [i].point.y, targetPosition.z);
-								break;
-							}
-						} else {
-							targetPosition = transform.position + attackDir * attackDis;
-							targetPosition = new Vector3 (targetPosition.x, targetPosition.y, 0);
-						}
-					}
-				}
-
-				isAttack = true;
-				StopCoroutine ("AttackDelay");
-				StartCoroutine ("AttackDelay",attackDelayTime);
-			}
-		}
 	}
 
 	IEnumerator attackDelay;

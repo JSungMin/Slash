@@ -11,10 +11,24 @@ public class CameraMoving : MonoBehaviour {
 
 	public float maxCameraDis;
 
+	public bool isShaking = false;
+
 	public void Start(){
 		mainCamera = GetComponent<Camera> ();
 		player = GameObject.FindObjectOfType<Player> ().transform;
-		Cursor.lockState = CursorLockMode.Confined;
+		StartCoroutine (ShakeCamera ());
+	}
+
+	public float angle;
+
+	public IEnumerator ShakeCamera(){
+		while (true) {
+			yield return null;
+			if(isShaking){
+				yield return new WaitForSeconds (0.1f);
+				isShaking = false;
+			}
+		}
 	}
 
 	public void Update(){
@@ -30,7 +44,10 @@ public class CameraMoving : MonoBehaviour {
 		}
 
 		transform.position = Vector3.Lerp (transform.position, tmpPosition + dir * dis, Time.deltaTime*10);
-
+		if (isShaking) {
+			angle += Time.deltaTime * 50;
+			transform.position += Mathf.Sin (angle)*dir*0.25f;
+		}
 	}
 
 }
