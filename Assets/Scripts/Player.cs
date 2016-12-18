@@ -161,9 +161,13 @@ public class Player : MonoBehaviour {
 
 					transform.position = new Vector3(newHit[i].point.x,newHit[i].point.y,transform.position.z) - dir*walkDis*Time.deltaTime;
 					break;
-				} else {
+				} else if(xDir != Vector3.zero || yDir != Vector3.zero){
 					transform.Translate (dir*walkDis*Time.deltaTime);
 				}
+                else
+                {
+                    dir = Vector3.zero;
+                }
 			}
 		}
 
