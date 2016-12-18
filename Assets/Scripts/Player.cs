@@ -75,7 +75,7 @@ public class Player : MonoBehaviour {
 				stamina += staminaHealingAmount;
 		}
 	}
-
+    
 	public bool DecreaseStamina(int amount){
 		if (stamina - amount >= 0) {
 			stamina -= amount;
@@ -153,7 +153,6 @@ public class Player : MonoBehaviour {
 			yDir = Vector3.up;
 			dir = (xDir + yDir).normalized;
 		}
-
 		var newHit = Physics2D.RaycastAll (transform.position,dir, walkDis*Time.deltaTime);
 
 		if(newHit.Length!=0){
@@ -168,7 +167,6 @@ public class Player : MonoBehaviour {
 			}
 		}
 
-		dir = Vector3.zero;
 		xDir = Vector3.zero;
 		yDir = Vector3.zero;
 	}
