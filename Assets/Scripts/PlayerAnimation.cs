@@ -23,7 +23,6 @@ public class PlayerAnimation : MonoBehaviour {
 	void Update () {
 		if(player.isAttack == false)
         {
-            Debug.Log(player.dir);
             if (Input.GetKey(KeyCode.W))
             {
                 cur_dir = Direction.Back;
@@ -43,7 +42,10 @@ public class PlayerAnimation : MonoBehaviour {
 
             if(player.dir != Vector3.zero)
             {
-                Debug.Log("noo");
+                setAnimation(0, cur_dir + "_Run", true, 1f);
+            }else
+            {
+                setAnimation(0, cur_dir + "_Idle", true, 1f);
             }
 
         }else
