@@ -63,7 +63,7 @@ public class PlayerAnimation : MonoBehaviour {
 
         }else
         {
-            
+            setAnimation(0, cur_dir + "_Attack_withoutIdle", false, 1.5f);
         }
 	}
     void setAnimation(int index, string name, bool loop, float time)

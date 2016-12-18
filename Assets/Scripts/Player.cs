@@ -207,9 +207,9 @@ public class Player : MonoBehaviour {
 
 		MouseInputProcess ();
 
-		if (Vector3.Distance (transform.position, targetPosition) <= intenceDistance) {
-			isAttack = false;
-		}
+		//if (Vector3.Distance (transform.position, targetPosition) <= intenceDistance) {
+		//	isAttack = false;
+		//}
 		Debug.DrawLine (transform.position, targetPosition,Color.red);
 	}
 }
