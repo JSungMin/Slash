@@ -12,6 +12,7 @@ public class PlayerAnimation : MonoBehaviour {
     string cur_animation;
     enum Direction { Front, Back, Left, Right };
     Direction cur_dir;
+    Direction past_dir;
 	// Use this for initialization
 	void Start () {
         player = GetComponent<Player>();
@@ -23,21 +24,33 @@ public class PlayerAnimation : MonoBehaviour {
 	void Update () {
 		if(player.isAttack == false)
         {
-            if (Input.GetKey(KeyCode.W))
+            if (!(Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) && !(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.S)))
             {
-                cur_dir = Direction.Back;
+                if (Input.GetKey(KeyCode.W))
+                {
+                    cur_dir = Direction.Back;
+
+                }
+                if (Input.GetKey(KeyCode.A))
+                {
+                    cur_dir = Direction.Left;
+
+                }
+                if (Input.GetKey(KeyCode.D))
+                {
+                    cur_dir = Direction.Right;
+
+                }
+                if (Input.GetKey(KeyCode.S))
+                {
+                    cur_dir = Direction.Front;
+
+                }
             }
-            if (Input.GetKey(KeyCode.A))
+            if(past_dir != cur_dir)
             {
-                cur_dir = Direction.Left;
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                cur_dir = Direction.Right;
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                cur_dir = Direction.Front;
+                skel.state.ClearTrack(0);
+                past_dir = cur_dir;
             }
 
             if(player.dir != Vector3.zero)
@@ -50,7 +63,7 @@ public class PlayerAnimation : MonoBehaviour {
 
         }else
         {
-
+            
         }
 	}
     void setAnimation(int index, string name, bool loop, float time)
@@ -60,7 +73,6 @@ public class PlayerAnimation : MonoBehaviour {
             return;
         }else
         {
-            skel.state.ClearTrack(index);
             skel.state.SetAnimation(index, name, loop).TimeScale = time;
             cur_animation = name;
         }

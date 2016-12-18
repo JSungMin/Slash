@@ -153,6 +153,14 @@ public class Player : MonoBehaviour {
 			yDir = Vector3.up;
 			dir = (xDir + yDir).normalized;
 		}
+        if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.S))
+        {
+            dir = Vector3.zero;
+        }
+        if(Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
+        {
+            dir = Vector3.zero;
+        }
 		var newHit = Physics2D.RaycastAll (transform.position,dir, walkDis*Time.deltaTime);
 
 		if(newHit.Length!=0){
