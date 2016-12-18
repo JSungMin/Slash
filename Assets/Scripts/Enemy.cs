@@ -16,7 +16,9 @@ public class Enemy : MonoBehaviour {
 	}
 
 	public void Die(){
+		dieParticle.transform.parent = transform.parent;
 		dieParticle.Play();	
+		DestroyObject (this.gameObject);
 	}
 
 	// Update is called once per frame
