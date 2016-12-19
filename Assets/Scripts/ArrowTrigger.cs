@@ -10,6 +10,7 @@ public class ArrowTrigger : MonoBehaviour {
 		if(col.gameObject.CompareTag("Enemy")&&player.isAttack){
 			col.gameObject.GetComponent<Enemy> ().Die ();
 			Camera.main.GetComponent<CameraMoving> ().isShaking = true;
+			Camera.main.GetComponent<CameraMoving> ().isZoomIn = true;
 			Debug.Log ("EnemyDie");
 		}
 	}

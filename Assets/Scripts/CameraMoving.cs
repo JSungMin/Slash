@@ -13,10 +13,19 @@ public class CameraMoving : MonoBehaviour {
 
 	public bool isShaking = false;
 
+	[SerializeField]
+	private float maxZoomIn;
+	[SerializeField]
+	private float maxZoomOut;
+
+	public bool isZoomIn = false;
+
 	public void Start(){
 		mainCamera = GetComponent<Camera> ();
 		player = GameObject.FindObjectOfType<Player> ().transform;
 		StartCoroutine (ShakeCamera ());
+		StartCoroutine (ZoomIn());
+		StartCoroutine (ZoomOut());
 	}
 
 	public float angle;
@@ -27,6 +36,26 @@ public class CameraMoving : MonoBehaviour {
 			if(isShaking){
 				yield return new WaitForSeconds (0.2f);
 				isShaking = false;
+			}
+		}
+	}
+
+	public IEnumerator ZoomIn(){
+		while(true){
+			yield return null;
+			if (isZoomIn && mainCamera.orthographicSize > maxZoomIn) {
+				mainCamera.orthographicSize = Mathf.Lerp (mainCamera.orthographicSize - 0.1f, maxZoomIn, Time.deltaTime * 3);
+			} else {
+				isZoomIn = false;
+			}
+		}
+	}
+
+	public IEnumerator ZoomOut(){
+		while (true) {
+			yield return null;
+			if (!isZoomIn&&mainCamera.orthographicSize<maxZoomOut) {
+				mainCamera.orthographicSize = Mathf.Lerp (mainCamera.orthographicSize,maxZoomOut,Time.deltaTime*3);
 			}
 		}
 	}

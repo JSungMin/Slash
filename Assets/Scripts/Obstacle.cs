@@ -15,7 +15,7 @@ public class Obstacle : MonoBehaviour {
 			if(col.CompareTag("Player")){
 				col.GetComponent<Player> ().hp -= trapDamage;
 				col.GetComponent<Player> ().isDamaged = true;
-				col.GetComponent<Rigidbody2D> ().AddForce ((col.transform.position - transform.position).normalized * trapDamage*50,ForceMode2D.Impulse);
+				col.GetComponent<Rigidbody2D> ().AddForce ((col.transform.position - transform.position).normalized * trapDamage*150,ForceMode2D.Impulse);
 			}
 		}
 	}
