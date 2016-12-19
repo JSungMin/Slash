@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Spine;
 using Spine.Unity;
+using Spine.Unity.Modules;
 
 public class PlayerAnimation : MonoBehaviour {
 
-
+    SkeletonGhost ghost;
     SkeletonAnimation skel;
     Player player;
     string cur_animation;
@@ -16,14 +17,15 @@ public class PlayerAnimation : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         player = GetComponent<Player>();
-        skel = GetComponentInChildren<SkeletonAnimation>();	
-
+        skel = GetComponentInChildren<SkeletonAnimation>();
+        ghost = GetComponentInChildren<SkeletonGhost>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(player.isAttack == false)
         {
+            ghost.color.a = 1;
             if (!(Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) && !(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.S)))
             {
                 if (Input.GetKey(KeyCode.W))
@@ -63,7 +65,8 @@ public class PlayerAnimation : MonoBehaviour {
 
         }else
         {
-            setAnimation(0, cur_dir + "_Attack_withoutIdle", false, 1.5f);
+            ghost.color.a = 0;
+            setAnimation(0, cur_dir + "_Attack_withoutIdle", false, 3f);
         }
 	}
     void setAnimation(int index, string name, bool loop, float time)
