@@ -17,19 +17,20 @@ public class Player : MonoBehaviour {
 
 	public Vector3 dir;
 
-	public Vector3 xDir;
-	public Vector3 yDir;
+	private Vector3 xDir;
+	private Vector3 yDir;
 
-	public bool leftMouse;
+	private bool leftMouse;
 
 	public Vector3 mouseInputPosition;
-	public Vector3 attackDir;
+	private Vector3 attackDir;
+
 	public Vector3 targetPosition;
 
 	public bool isAttack;
+	public bool isDamaged = false;
 	public bool isReloading = false;
 
-	public int doorCheck = 0;
 
 	public float intenceDistance;
 
@@ -41,22 +42,14 @@ public class Player : MonoBehaviour {
 
 	public GameObject nowLevel;
 
-	public IEnumerator FadeOut(SpriteRenderer sprite){
-		var alpha = sprite.color.a;
-		while(sprite.color.a>0){
-			yield return null;
-			alpha -= Time.deltaTime;
-			sprite.color = new Color (sprite.color.r,sprite.color.g,sprite.color.b,alpha);
-		}
-		StopCoroutine ("FadeOut");
+
+
+	public Vector3 GetKeyBoardMoveDirection(){
+		return dir;
 	}
 
-	public void EnterNewLevel(GameObject level){
-		var sprites = nowLevel.transform.GetComponentsInChildren<SpriteRenderer> ();
-		for(int i =0;i<sprites.Length;i++){
-			StartCoroutine ("FadeOut", sprites [i]);
-		}
-		nowLevel = level;
+	public Vector3 GetAttackDirection(){
+		return attackDir;
 	}
 
 	// Use this for initialization
@@ -89,7 +82,7 @@ public class Player : MonoBehaviour {
 		float angle = Mathf.Atan2 (tmpDir.x,tmpDir.y)*Mathf.Rad2Deg;
 
 		arrow.transform.localRotation = Quaternion.AngleAxis(angle - 90,Vector3.back);
-		arrow.transform.localScale = Vector3.one * Mathf.Clamp (Vector3.Distance (transform.position, mouseInputPosition)-attackDis, 0, 4);
+		arrow.transform.localScale = Vector3.one * Mathf.Clamp (Vector3.Distance (transform.position, mouseInputPosition), 0, 4);
 	}
 
 	public void CalculateMousePosition(Vector3 mPosition){
@@ -101,10 +94,12 @@ public class Player : MonoBehaviour {
 		hit = Physics2D.RaycastAll (transform.position, attackDir, attackDis);
 		if(hit.Length!=0){
 			for(int i =0;i<hit.Length;i++){
-				if (hit [i].transform.CompareTag ("Wall")) {
-					if (Vector3.Distance (transform.position, targetPosition) > Vector3.Distance (transform.position, new Vector3 (hit [i].point.x, hit [i].point.y, transform.position.z))) {
-						targetPosition = new Vector3 (hit [i].point.x, hit [i].point.y, targetPosition.z);
-						return true;
+				if (hit [i].transform.GetComponent<Obstacle>()!=null) {
+					if (!hit [i].transform.GetComponent<Obstacle> ().canStand) {
+						if (Vector3.Distance (transform.position, targetPosition) > Vector3.Distance (transform.position, new Vector3 (hit [i].point.x, hit [i].point.y, transform.position.z))) {
+							targetPosition = new Vector3 (hit [i].point.x, hit [i].point.y, targetPosition.z);
+							return true;
+						}
 					}
 				} else {
 					targetPosition = transform.position + attackDir * attackDis;
@@ -165,10 +160,11 @@ public class Player : MonoBehaviour {
 
 		if(newHit.Length!=0){
 			for(int i =0;i<newHit.Length;i++){
-				if (newHit [i].transform.CompareTag ("Wall")) {
-
-					transform.position = new Vector3(newHit[i].point.x,newHit[i].point.y,transform.position.z) - dir*walkDis*Time.deltaTime;
-					break;
+				if (newHit [i].transform.GetComponent<Obstacle>()!=null) {
+					if(!newHit[i].transform.GetComponent<Obstacle>().canStand){
+						//transform.position = new Vector3 (newHit [i].point.x, newHit [i].point.y, transform.position.z);
+						break;
+					}
 				} else if(xDir != Vector3.zero || yDir != Vector3.zero){
 					transform.Translate (dir*walkDis*Time.deltaTime);
 				}
@@ -196,20 +192,26 @@ public class Player : MonoBehaviour {
 		Debug.Log ("Reloading Finished");
 	}
 
+	public IEnumerator Damaged(float time){
+		yield return new WaitForSeconds (time);
+		if(isDamaged){
+			isDamaged = false;
+		}
+		StopCoroutine ("Damaged");
+	}
 
 	// Update is called once per frame
 	void Update () {
-		if (!isReloading)
-			KeyInputProcess ();
-		else {
-			transform.position = Vector3.Lerp (transform.position, targetPosition, Time.deltaTime * 20);
+		if (!isDamaged) {
+			if (!isReloading)
+				KeyInputProcess ();
+			else {
+				transform.position = Vector3.Lerp (transform.position, targetPosition, Time.deltaTime * 20);
+			}
+
+			MouseInputProcess ();
+		} else {
+			StartCoroutine ("Damaged", 0.5f);
 		}
-
-		MouseInputProcess ();
-
-		//if (Vector3.Distance (transform.position, targetPosition) <= intenceDistance) {
-		//	isAttack = false;
-		//}
-		Debug.DrawLine (transform.position, targetPosition,Color.red);
 	}
 }

@@ -25,9 +25,7 @@ public class LevelInfo : MonoBehaviour {
 		player = GameObject.FindObjectOfType<Player> ();
 		if (SearchAndGetEnemyNum () != 0) {
 			for(int i =0;i<doorTriggers.Length;i++){
-				if(!doorTriggers[i].isLock){
-					doorTriggers [i].isOpen = false;
-				}
+				
 			}
 		}
 	}
@@ -35,11 +33,7 @@ public class LevelInfo : MonoBehaviour {
 	public void Update(){
 		if (SearchAndGetEnemyNum () == 0&&!isClear) {
 			for(int i =0;i<doorTriggers.Length;i++){
-				if(!doorTriggers[i].isLock){
-					doorTriggers [i].isOpen = true;
-					player.doorCheck = 0;
-					isClear = true;
-				}
+				
 			}
 		}
 	}
