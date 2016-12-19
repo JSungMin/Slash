@@ -63,10 +63,41 @@ public class PlayerAnimation : MonoBehaviour {
                 setAnimation(0, cur_dir + "_Idle", true, 1f);
             }
 
-        }else
+        }else 
         {
             ghost.color.a = 0;
-            setAnimation(0, cur_dir + "_Attack_withoutIdle", false, 3f);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                Vector3 vec = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+                float degree = Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg;
+                if (degree > -45 && degree <= 45)
+                {
+                    cur_dir = Direction.Right;
+                }
+                else if (degree > 45 && degree <= 135)
+                {
+                    cur_dir = Direction.Back;
+                }
+                else if (degree > 135 || degree <= -135)
+                {
+                    cur_dir = Direction.Left;
+                }
+                else
+                {
+                    cur_dir = Direction.Front;
+                }
+                if (past_dir != cur_dir)
+                {
+                    skel.state.ClearTrack(0);
+                    past_dir = cur_dir;
+                }
+
+                print(degree);
+                setAnimation(0, cur_dir + "_Attack_withoutIdle", false, 3f);
+            }
+
+          
         }
 	}
     void setAnimation(int index, string name, bool loop, float time)
