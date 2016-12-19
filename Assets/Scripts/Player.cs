@@ -30,7 +30,8 @@ public class Player : MonoBehaviour {
 	public bool isAttack;
 	public bool isDamaged = false;
 	public bool isReloading = false;
-
+	[SerializeField]
+	private bool isDead = false;
 
 	public float intenceDistance;
 
@@ -42,7 +43,7 @@ public class Player : MonoBehaviour {
 
 	public GameObject nowLevel;
 
-
+	public GameObject deadEffect;
 
 	public Vector3 GetKeyBoardMoveDirection(){
 		return dir;
@@ -202,6 +203,14 @@ public class Player : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if(hp<=0&&!isDead){
+			isDead = true;
+			Camera.main.GetComponent<CameraMoving> ().isZoomIn = true;
+			var newDeadEff = Instantiate (deadEffect,transform) as GameObject;
+			newDeadEff.transform.localPosition = new Vector3 (0,0,-5);
+			newDeadEff.GetComponent<ParticleSystem> ().Play ();
+		}
+
 		if (!isDamaged) {
 			if (!isReloading)
 				KeyInputProcess ();
