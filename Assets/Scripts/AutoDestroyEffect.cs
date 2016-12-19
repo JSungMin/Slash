@@ -12,6 +12,7 @@ public class AutoDestroyEffect : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(GetComponent<ParticleSystem>().time>=GetComponent<ParticleSystem>().duration){
+			Debug.Log ("죽어 죽ㅓ");
 			DestroyObject (this.gameObject);
 		}
 	}
