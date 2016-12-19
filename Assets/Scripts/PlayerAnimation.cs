@@ -23,7 +23,7 @@ public class PlayerAnimation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(player.isAttack == false)
+        if (player.isAttack == false)
         {
             ghost.color.a = 1;
             if (!(Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) && !(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.S)))
@@ -49,55 +49,54 @@ public class PlayerAnimation : MonoBehaviour {
 
                 }
             }
-            if(past_dir != cur_dir)
+            if (past_dir != cur_dir)
             {
                 skel.state.ClearTrack(0);
                 past_dir = cur_dir;
             }
 
-            if(player.dir != Vector3.zero)
+            if (player.dir != Vector3.zero)
             {
                 setAnimation(0, cur_dir + "_Run", true, 1f);
-            }else
+            }
+            else
             {
                 setAnimation(0, cur_dir + "_Idle", true, 1f);
             }
 
-        }else 
+        }
+        else
         {
             ghost.color.a = 0;
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                Vector3 vec = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                float degree = Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg;
-                if (degree > -45 && degree <= 45)
-                {
-                    cur_dir = Direction.Right;
-                }
-                else if (degree > 45 && degree <= 135)
-                {
-                    cur_dir = Direction.Back;
-                }
-                else if (degree > 135 || degree <= -135)
-                {
-                    cur_dir = Direction.Left;
-                }
-                else
-                {
-                    cur_dir = Direction.Front;
-                }
-                if (past_dir != cur_dir)
-                {
-                    skel.state.ClearTrack(0);
-                    past_dir = cur_dir;
-                }
 
-                print(degree);
-                setAnimation(0, cur_dir + "_Attack_withoutIdle", false, 3f);
+            Vector3 vec = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            float degree = Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg;
+            if (degree > -45 && degree <= 45)
+            {
+                cur_dir = Direction.Right;
+            }
+            else if (degree > 45 && degree <= 135)
+            {
+                cur_dir = Direction.Back;
+            }
+            else if (degree > 135 || degree <= -135)
+            {
+                cur_dir = Direction.Left;
+            }
+            else
+            {
+                cur_dir = Direction.Front;
+            }
+            if (past_dir != cur_dir)
+            {
+                skel.state.ClearTrack(0);
+                past_dir = cur_dir;
             }
 
-          
+            print(degree);
+            setAnimation(0, cur_dir + "_Attack_withoutIdle", false, 3f);
+
         }
 	}
     void setAnimation(int index, string name, bool loop, float time)
