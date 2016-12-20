@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour {
 	void Start () {
 		unitInfo = GetComponent<Unit> ();
 		dieParticle = transform.GetComponentInChildren<ParticleSystem> ();
+
+		StartCoroutine ("CheckDie");
 	}
 
 	public void Die(){
@@ -21,9 +23,18 @@ public class Enemy : MonoBehaviour {
 		DestroyObject (this.gameObject);
 	}
 
+	public IEnumerator CheckDie(){
+		while(!unitInfo.GetIsDie()){
+			if (unitInfo.hp <= 0) {
+				unitInfo.SetIsDie (true);
+				Die ();
+			}
+		}
+		StopCoroutine ("CheckDie");
+	}
+
 	// Update is called once per frame
 	void Update () {
-		if (unitInfo.hp <= 0)
-			Die ();		
+		
 	}
 }
