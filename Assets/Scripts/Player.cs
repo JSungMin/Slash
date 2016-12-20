@@ -79,11 +79,13 @@ public class Player : MonoBehaviour {
 	}
 		
 	public void CalculateArrow(Vector3 mPosition){
-		var tmpDir = (mPosition - transform.position);
-		float angle = Mathf.Atan2 (tmpDir.x,tmpDir.y)*Mathf.Rad2Deg;
+		if (!isAttack) {
+			var tmpDir = (mPosition - transform.position);
+			float angle = Mathf.Atan2 (tmpDir.x, tmpDir.y) * Mathf.Rad2Deg;
 
-		arrow.transform.localRotation = Quaternion.AngleAxis(angle - 90,Vector3.back);
-		arrow.transform.localScale = Vector3.one * Mathf.Clamp (Vector3.Distance (transform.position, mouseInputPosition), 0, 4);
+			arrow.transform.localRotation = Quaternion.AngleAxis (angle - 90, Vector3.back);
+			//arrow.transform.localScale = Vector3.one * Mathf.Clamp (Mathf.Abs(Vector3.Distance (transform.position, mouseInputPosition)-15), 0, 4);
+		}
 	}
 
 	public void CalculateMousePosition(Vector3 mPosition){
@@ -125,6 +127,7 @@ public class Player : MonoBehaviour {
 
 				var isCollisionWithWall = CheckTargetPosition ();
 
+				GetComponent<AudioSource> ().Play ();
 				isAttack = true;
 				StopCoroutine ("AttackDelay");
 				StartCoroutine ("AttackDelay",attackDelayTime);
@@ -217,7 +220,6 @@ public class Player : MonoBehaviour {
 			else {
 				transform.position = Vector3.Lerp (transform.position, targetPosition, Time.deltaTime * 20);
 			}
-
 			MouseInputProcess ();
 		} else {
 			StartCoroutine ("Damaged", 0.5f);

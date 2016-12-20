@@ -11,6 +11,7 @@ public class ArrowTrigger : MonoBehaviour {
 			col.gameObject.GetComponent<Enemy> ().Die ();
 			Camera.main.GetComponent<CameraMoving> ().isShaking = true;
 			Camera.main.GetComponent<CameraMoving> ().isZoomIn = true;
+			GetComponent<AudioSource> ().Play ();
 			Debug.Log ("EnemyDie");
 		}
 	}

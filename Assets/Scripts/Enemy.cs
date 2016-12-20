@@ -8,11 +8,6 @@ public class Enemy : EnemyPatternModule {
 
 	public ParticleSystem dieParticle;
 
-	public bool canMovePattern1;
-
-	private delegate void EnemyAttackPattern();
-	private delegate void EnemyMovePattern();
-
 	// Use this for initialization
 	void Start () {
 		unitInfo = GetComponent<Unit> ();
