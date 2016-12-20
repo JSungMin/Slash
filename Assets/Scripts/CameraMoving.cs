@@ -69,10 +69,10 @@ public class CameraMoving : MonoBehaviour {
 	RaycastHit2D downHit;
 
 	public void ProcessOutSide(){
-		leftHit = Physics2D.Raycast(player.position, Vector2.left,3,1<<LayerMask.NameToLayer("BlockingLayer"));
-		rightHit = Physics2D.Raycast (player.position, Vector2.right,3,1<<LayerMask.NameToLayer("BlockingLayer"));
-		upHit = Physics2D.Raycast (player.position,Vector2.up,3,1<<LayerMask.NameToLayer("BlockingLayer"));
-		downHit = Physics2D.Raycast (player.position, Vector2.down,3,1<<LayerMask.NameToLayer("BlockingLayer"));
+		leftHit = Physics2D.Raycast(player.position, Vector2.left,5,1<<LayerMask.NameToLayer("BlockingLayer"));
+		rightHit = Physics2D.Raycast (player.position, Vector2.right,5,1<<LayerMask.NameToLayer("BlockingLayer"));
+		upHit = Physics2D.Raycast (player.position,Vector2.up,5,1<<LayerMask.NameToLayer("BlockingLayer"));
+		downHit = Physics2D.Raycast (player.position, Vector2.down,5,1<<LayerMask.NameToLayer("BlockingLayer"));
 
 		var dx = rightHit.distance - leftHit.distance;
 		if (dx > 0)
@@ -82,9 +82,9 @@ public class CameraMoving : MonoBehaviour {
 		var dy = upHit.distance - downHit.distance;
 
 		if (dy > 0)
-			dy -= 2;
+			dy -= 3;
 		else if (dy < 0)
-			dy += 2;
+			dy += 3;
 
 		obstacleDir = new Vector3 (dx, dy, 0);
 

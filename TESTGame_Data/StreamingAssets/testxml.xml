@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Unit>
+	<Field ID="0" NAME="SOM01" HP="1" MP="0" STR="1" DEF="0" DEX="1" SPEED="0.8"/>
+	<Field ID="1" NAME="Zombie01" HP="1" MP="0" STR="1" DEF="0" DEX="1" SPEED="0.3"/>
+	<Field ID="2" NAME="Zombie02" HP="1" MP="0" STR="1" DEF="1" DEX="1" SPEED="0.5"/>
+</Unit>

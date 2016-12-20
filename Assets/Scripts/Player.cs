@@ -139,6 +139,8 @@ public class Player : MonoBehaviour {
 		}
 	}
 
+	public ParticleSystem dustEffect;
+
 	private void KeyInputProcess(){
 		if(Input.GetKey(KeyCode.A)){
 			xDir = Vector3.left;
@@ -175,10 +177,13 @@ public class Player : MonoBehaviour {
 					}
 				} else if(xDir != Vector3.zero || yDir != Vector3.zero){
 					transform.Translate (dir*walkDis*Time.deltaTime);
+					if(!dustEffect.isPlaying)
+						dustEffect.Play ();
 				}
                 else
                 {
                     dir = Vector3.zero;
+					dustEffect.Stop ();
                 }
 			}
 		}
