@@ -45,6 +45,10 @@ public class Player : MonoBehaviour {
 
 	public GameObject deadEffect;
 
+	public bool GetIsDead(){
+		return isDead;
+	}
+
 	public Vector3 GetKeyBoardMoveDirection(){
 		return dir;
 	}

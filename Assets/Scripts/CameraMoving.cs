@@ -20,6 +20,9 @@ public class CameraMoving : MonoBehaviour {
 
 	public bool isZoomIn = false;
 
+	public bool isPlayerOnOutside;
+	public Vector3 obstacleDir;
+
 	public void Start(){
 		mainCamera = GetComponent<Camera> ();
 		player = GameObject.FindObjectOfType<Player> ().transform;
@@ -60,6 +63,33 @@ public class CameraMoving : MonoBehaviour {
 		}
 	}
 
+	RaycastHit2D leftHit;
+	RaycastHit2D rightHit;
+	RaycastHit2D upHit;
+	RaycastHit2D downHit;
+
+	public void ProcessOutSide(){
+		leftHit = Physics2D.Raycast(player.position, Vector2.left,3,1<<LayerMask.NameToLayer("BlockingLayer"));
+		rightHit = Physics2D.Raycast (player.position, Vector2.right,3,1<<LayerMask.NameToLayer("BlockingLayer"));
+		upHit = Physics2D.Raycast (player.position,Vector2.up,3,1<<LayerMask.NameToLayer("BlockingLayer"));
+		downHit = Physics2D.Raycast (player.position, Vector2.down,3,1<<LayerMask.NameToLayer("BlockingLayer"));
+
+		var dx = rightHit.distance - leftHit.distance;
+		if (dx > 0)
+			dx -= 5;
+		else if (dx < 0)
+			dx += 5;
+		var dy = upHit.distance - downHit.distance;
+
+		if (dy > 0)
+			dy -= 2;
+		else if (dy < 0)
+			dy += 2;
+
+		obstacleDir = new Vector3 (dx, dy, 0);
+
+	}
+
 	public void Update(){
 		mousePosition = Input.mousePosition;
 		var tmpPosition = player.position;
@@ -71,8 +101,13 @@ public class CameraMoving : MonoBehaviour {
 		if (dis > maxCameraDis) {
 			dis = maxCameraDis;
 		}
+			
+		ProcessOutSide ();
 
-		transform.position = Vector3.Lerp (transform.position, tmpPosition + dir * dis, Time.deltaTime*10);
+		tmpPosition += dir * dis + obstacleDir;
+
+		transform.position = Vector3.Lerp (transform.position, tmpPosition, Time.deltaTime * 10);
+
 		if (isShaking) {
 			angle += Time.deltaTime * 50;
 			transform.position += Mathf.Sin (angle)*dir*0.25f;
