@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : EnemyPatternModule {
 
 	public Unit unitInfo;
 
 	public ParticleSystem dieParticle;
 
+	public bool canMovePattern1;
+
+	private delegate void EnemyAttackPattern();
+	private delegate void EnemyMovePattern();
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +29,7 @@ public class Enemy : MonoBehaviour {
 
 	public IEnumerator CheckDie(){
 		while(!unitInfo.GetIsDie()){
+			yield return null;
 			if (unitInfo.hp <= 0) {
 				unitInfo.SetIsDie (true);
 				Die ();
