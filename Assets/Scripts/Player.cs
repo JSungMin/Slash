@@ -122,6 +122,7 @@ public class Player : MonoBehaviour {
 
 	private void MouseInputProcess(){
 		leftMouse = Input.GetMouseButton (0);
+		leftMouseUp = Input.GetMouseButtonUp (0);
 		CalculateMousePosition (Input.mousePosition);
 		CalculateArrow (mouseInputPosition);
 
@@ -139,7 +140,6 @@ public class Player : MonoBehaviour {
 				StartCoroutine ("AttackDelay",attackDelayTime);
 			}
 		}
-		leftMouseUp = Input.GetMouseButtonUp (0);
 	}
 
 	public ParticleSystem dustEffect;
