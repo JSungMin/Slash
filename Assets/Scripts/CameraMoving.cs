@@ -47,7 +47,7 @@ public class CameraMoving : MonoBehaviour {
 		while(true){
 			yield return null;
 			if (isZoomIn && mainCamera.orthographicSize > maxZoomIn) {
-				mainCamera.orthographicSize = Mathf.Lerp (mainCamera.orthographicSize - 0.1f, maxZoomIn, Time.deltaTime * 3);
+				mainCamera.orthographicSize = Mathf.Lerp (mainCamera.orthographicSize - 0.1f, maxZoomIn, Time.deltaTime * 8);
 			} else {
 				isZoomIn = false;
 			}
@@ -58,7 +58,7 @@ public class CameraMoving : MonoBehaviour {
 		while (true) {
 			yield return null;
 			if (!isZoomIn&&mainCamera.orthographicSize<maxZoomOut) {
-				mainCamera.orthographicSize = Mathf.Lerp (mainCamera.orthographicSize,maxZoomOut,Time.deltaTime*3);
+				mainCamera.orthographicSize = Mathf.Lerp (mainCamera.orthographicSize,maxZoomOut,Time.deltaTime*2);
 			}
 		}
 	}

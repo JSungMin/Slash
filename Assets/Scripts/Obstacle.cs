@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour {
+public class Obstacle : RoomClearModule {
 
 	public bool canStand = false;
 
@@ -19,7 +19,16 @@ public class Obstacle : MonoBehaviour {
 			}
 		}
 	}
-		
+
+	public void SetCanStand(bool val){
+		canStand = val;
+		if (val) {
+			GetComponent<BoxCollider2D> ().isTrigger = true;
+		} else {
+			GetComponent<BoxCollider2D> ().isTrigger = false;
+		}
+	}
+
 	public void Start(){
 		if (canStand) {
 			GetComponent<BoxCollider2D> ().isTrigger = true;
