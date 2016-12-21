@@ -21,6 +21,7 @@ public class Player : MonoBehaviour {
 	private Vector3 yDir;
 
 	private bool leftMouse;
+	private bool leftMouseUp= true;
 
 	public Vector3 mouseInputPosition;
 	private Vector3 attackDir;
@@ -121,11 +122,11 @@ public class Player : MonoBehaviour {
 
 	private void MouseInputProcess(){
 		leftMouse = Input.GetMouseButton (0);
-
 		CalculateMousePosition (Input.mousePosition);
 		CalculateArrow (mouseInputPosition);
 
-		if (leftMouse) {
+		if (leftMouse&&leftMouseUp) {
+			leftMouseUp = false;
 			if (!isReloading&&DecreaseStamina(5)) {
 				attackDir = (mouseInputPosition - transform.position).normalized;
 
@@ -138,6 +139,7 @@ public class Player : MonoBehaviour {
 				StartCoroutine ("AttackDelay",attackDelayTime);
 			}
 		}
+		leftMouseUp = Input.GetMouseButtonUp (0);
 	}
 
 	public ParticleSystem dustEffect;
