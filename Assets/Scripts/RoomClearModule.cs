@@ -5,14 +5,23 @@ using UnityEngine;
 public class RoomClearModule : MonoBehaviour {
 
 	public bool isAnnihilation;
+	public bool isTimeAttack;
+	public bool isFree;
 
-	// Use this for initialization
-	void Start () {
-		
+	public float timeAttackTime;
+	protected float invadeTime;//For TimAttack
+
+	protected bool CheckAllEnemyCleared(Transform enemyPool){
+		if(enemyPool.childCount==0){
+			return true;
+		}
+		return false;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	protected bool CheckTimeAttack(){
+		if(Time.time - invadeTime>=timeAttackTime){
+			return true;
+		}
+		return false;
 	}
 }
