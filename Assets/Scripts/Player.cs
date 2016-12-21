@@ -133,6 +133,7 @@ public class Player : MonoBehaviour {
 
 				GetComponent<AudioSource> ().Play ();
 				isAttack = true;
+				dustAttackEffect.Play ();
 				StopCoroutine ("AttackDelay");
 				StartCoroutine ("AttackDelay",attackDelayTime);
 			}
@@ -140,6 +141,8 @@ public class Player : MonoBehaviour {
 	}
 
 	public ParticleSystem dustEffect;
+	public ParticleSystem dustAttackEffect;
+
 
 	private void KeyInputProcess(){
 		if(Input.GetKey(KeyCode.A)){
