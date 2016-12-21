@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RoomClearModule : MonoBehaviour {
 
+	public bool isAnnihilation;
+
 	// Use this for initialization
 	void Start () {
 		
