@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : RoomClearModule {
+public class Obstacle : MonoBehaviour {
 
 	public bool canStand = false;
 
