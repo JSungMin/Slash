@@ -57,7 +57,6 @@ public class EnemyPatternModule : MonoBehaviour {
 		if (isFindPlayer) {
 			if (dis <= enemySearchRadius) {
 				transform.Translate (dir * GetComponent<Unit> ().speed * Time.deltaTime);
-				Debug.Log ("MovePattern01");
 			}
 		}
 	}
@@ -84,7 +83,6 @@ public class EnemyPatternModule : MonoBehaviour {
 					isRandomTime = false;
 				}
 				transform.Translate (randomDir * GetComponent<Unit> ().speed * Time.deltaTime);
-				Debug.Log ("MovePattern02");
 			}
 		}
 	}
@@ -112,7 +110,7 @@ public class EnemyPatternModule : MonoBehaviour {
 				StartCoroutine ("DelayAttack");
 			}
 		} else if (isAttack) {
-			transform.position = Vector3.MoveTowards (transform.position,targetPos + attackDir*attackDistance,Time.deltaTime*3);
+			transform.position = Vector3.MoveTowards (transform.position,targetPos + attackDir*attackDistance,Time.deltaTime*3.5f);
 		}
 	}
 }

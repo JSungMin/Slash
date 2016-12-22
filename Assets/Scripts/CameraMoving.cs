@@ -20,7 +20,6 @@ public class CameraMoving : MonoBehaviour {
 
 	public bool isZoomIn = false;
 
-	public bool isPlayerOnOutside;
 	public Vector3 obstacleDir;
 
 	public void Start(){

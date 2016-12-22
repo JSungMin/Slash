@@ -41,6 +41,22 @@ public class Enemy : EnemyPatternModule {
 		DestroyObject (this.gameObject);
 	}
 
+	public void Damaged(int damage){
+		GetComponent<Unit> ().hp -= damage;
+	}
+
+	public void CheckRun(){
+		if(isAttack){
+			Debug.Log ("Enemy is running for attacking");
+		}
+	}
+
+	public void Attack(){
+		player.hp -= GetComponent<Unit> ().str;
+		player.GetComponent<Rigidbody2D> ().AddForce (dir * 600, ForceMode2D.Impulse);
+		player.isDamaged = true;
+	}
+
 	public IEnumerator CheckDie(){
 		while(!unitInfo.GetIsDie()){
 			yield return null;
@@ -52,6 +68,14 @@ public class Enemy : EnemyPatternModule {
 		StopCoroutine ("CheckDie");
 	}
 
+	public void OnCollisionEnter2D(Collision2D col){
+		if(col.collider.CompareTag("Player")){
+			if(isAttack){
+				Attack ();
+			}
+		}
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if (enemyMovePattern != null) {
@@ -60,5 +84,8 @@ public class Enemy : EnemyPatternModule {
 		if (enemyAttackPattern != null) {
 			enemyAttackPattern ();
 		}
+		//For Animation
+		CheckRun ();
+
 	}
 }
