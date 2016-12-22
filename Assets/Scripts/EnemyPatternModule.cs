@@ -18,17 +18,22 @@ public class EnemyPatternModule : MonoBehaviour {
 	public float enemySearchRadius;
 	public float enemySearchDelay;
 
+	public float attackDistance;
+
+	public float distanceIntence;
+
 	private bool isFindPlayer;
 
 	[SerializeField]
 	private bool isReloading = true;
 	private bool isDamaged = false;
 
-	public float attackDistance;
 
 	protected Vector3 dir;
-	public float dis;
-	public float distanceIntence;
+	[SerializeField]
+	protected float dis;
+	[SerializeField]
+	protected bool isAttack = false;
 
 	//Started in Enemy Script
 	protected IEnumerator SearchPlayer(Transform player){
@@ -46,26 +51,6 @@ public class EnemyPatternModule : MonoBehaviour {
 		}
 	}
 
-	protected IEnumerator DelayedSetBool(string valueName,bool value,float time){
-		yield return new WaitForSeconds (time);
-		switch(valueName){
-		case "isFindPlayer":
-			isFindPlayer = value;
-			break;
-		case"isDamaged":
-			isDamaged = value;
-			break;
-		case "isReloading":
-			Debug.Log ("뤼로뒹");
-			isReloading = value;
-			attackDir = Vector3.zero;
-			isAttack = false;
-			break;
-		}
-	}
-
-
-	bool isAttack = false;
 
 	//Always Follow Player
 	protected void MovePattern01(){
@@ -80,6 +65,7 @@ public class EnemyPatternModule : MonoBehaviour {
 
 	public Vector2 randomDir;
 	private bool isRandomTime = true;
+
 	public IEnumerator SetRandomTargetPosition(){
 		randomDir = new Vector2 (Random.Range(-1,2),Random.Range(-1,2)) + new Vector2(dir.x,dir.y);
 		randomDir = randomDir.normalized;
@@ -88,7 +74,8 @@ public class EnemyPatternModule : MonoBehaviour {
 		yield return new WaitForSeconds (1);
 		randomDir = Vector2.zero;
 	}
-	//Move like Random
+
+	//서치가 안되면 플레이어 중심적으로 랜덤으로 움직인다.
 	protected void MovePattern02(){
 		if(!isFindPlayer){
 			if (dis > enemySearchRadius) {
@@ -102,6 +89,7 @@ public class EnemyPatternModule : MonoBehaviour {
 		}
 	}
 
+
 	Vector3 targetPos;
 	Vector3 attackDir;
 
@@ -109,7 +97,6 @@ public class EnemyPatternModule : MonoBehaviour {
 		yield return new WaitForSeconds (1);
 		isReloading = true;
 		isAttack = false;
-		Debug.Log ("왜 앙ㅐ");
 		yield return new WaitForSeconds (1);
 		isReloading = false;
 	}
@@ -121,12 +108,11 @@ public class EnemyPatternModule : MonoBehaviour {
 			if (dis <= attackDistance) {
 				isAttack = true;
 				attackDir = dir;
-				Debug.Log (attackDir);
+				targetPos = transform.position;
 				StartCoroutine ("DelayAttack");
 			}
 		} else if (isAttack) {
-			Debug.Log ("isAttack");
-			transform.position = Vector3.MoveTowards (transform.position,transform.position + attackDir*attackDistance,Time.deltaTime*3);
+			transform.position = Vector3.MoveTowards (transform.position,targetPos + attackDir*attackDistance,Time.deltaTime*3);
 		}
 	}
 }

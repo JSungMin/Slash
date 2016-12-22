@@ -19,13 +19,16 @@ public class Enemy : EnemyPatternModule {
 
 		if (canMovePattern1) {
 			enemyMovePattern += new EnemyMovePattern(MovePattern01);
+			Debug.Log ("MovePattern01 Added");
 		}
 		if(canMovePattern2){
 			enemyMovePattern += new EnemyMovePattern (MovePattern02);
+			Debug.Log ("MovePattern02 Added");
 		}
 
 		if (canAttackPattern1) {
 			enemyAttackPattern += new EnemyAttackPattern(AttackPattern01);
+			Debug.Log ("AttackPattern01 Added");
 		}
 
 
@@ -51,9 +54,11 @@ public class Enemy : EnemyPatternModule {
 
 	// Update is called once per frame
 	void Update () {
-		if(enemyMovePattern != null)
+		if (enemyMovePattern != null) {
 			enemyMovePattern ();
-		if(enemyAttackPattern != null)
+		}
+		if (enemyAttackPattern != null) {
 			enemyAttackPattern ();
+		}
 	}
 }
