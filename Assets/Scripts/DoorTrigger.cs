@@ -33,10 +33,8 @@ public class DoorTrigger : RoomClearModule {
 		
 	private void GoThroughByDoor(Collision2D col){
 		if (isOpen) {
-			GetComponent<Obstacle> ().SetCanStand (true);
 			GetComponent<AudioSource> ().Play ();
-		} else {
-			col.transform.GetComponent<Rigidbody2D> ().AddForce ((col.transform.position - transform.position).normalized * 100, ForceMode2D.Impulse);
+			GetComponent<Obstacle> ().SetCanStand (true);
 		}
 	}
 
@@ -55,5 +53,28 @@ public class DoorTrigger : RoomClearModule {
 			}
 			GoThroughByDoor (col);
 		}
+	}
+
+	public void OnCollisionStay2D(Collision2D col){
+		if(col.gameObject.CompareTag("Player")){
+			if (isAnnihilation) {
+				isOpen = false;
+				isOpen = CheckAllEnemyCleared (transform.parent.parent.GetChild(0));
+			}
+			if (isTimeAttack) {
+				isOpen = false;
+				isOpen = CheckTimeAttack ();
+			}
+			if (isFree) {
+				isOpen = true;
+			}
+			GoThroughByDoor (col);
+		}
+	}
+
+	//this mean door is opend now
+	public void OnTriggerEnter2D(Collider2D col){
+		if(!GetComponent<AudioSource>().isPlaying)
+			GetComponent<AudioSource> ().Play ();
 	}
 }

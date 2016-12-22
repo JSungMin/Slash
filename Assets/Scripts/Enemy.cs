@@ -7,11 +7,27 @@ public class Enemy : EnemyPatternModule {
 	public Unit unitInfo;
 
 	public ParticleSystem dieParticle;
+	public Player player;
+
 
 	// Use this for initialization
 	void Start () {
 		unitInfo = GetComponent<Unit> ();
 		dieParticle = transform.GetComponentInChildren<ParticleSystem> ();
+		player = GameObject.FindObjectOfType<Player> ();
+		StartCoroutine (SearchPlayer (player.transform));
+
+		if (canMovePattern1) {
+			enemyMovePattern += new EnemyMovePattern(MovePattern01);
+		}
+		if(canMovePattern2){
+			enemyMovePattern += new EnemyMovePattern (MovePattern02);
+		}
+
+		if (canAttackPattern1) {
+			enemyAttackPattern += new EnemyAttackPattern(AttackPattern01);
+		}
+
 
 		StartCoroutine ("CheckDie");
 	}
@@ -35,6 +51,9 @@ public class Enemy : EnemyPatternModule {
 
 	// Update is called once per frame
 	void Update () {
-		
+		if(enemyMovePattern != null)
+			enemyMovePattern ();
+		if(enemyAttackPattern != null)
+			enemyAttackPattern ();
 	}
 }

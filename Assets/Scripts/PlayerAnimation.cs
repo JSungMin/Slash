@@ -93,8 +93,7 @@ public class PlayerAnimation : MonoBehaviour {
                 skel.state.ClearTrack(0);
                 past_dir = cur_dir;
             }
-
-            print(degree);
+	
             setAnimation(0, cur_dir + "_Attack_withoutIdle", false, 3f);
 
         }
