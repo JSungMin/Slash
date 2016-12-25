@@ -181,11 +181,15 @@ public class Player : MonoBehaviour {
 					transform.Translate (dir*walkDis*Time.deltaTime);
 					if(!dustEffect.isPlaying)
 						dustEffect.Play ();
+					if(!dustEffect.GetComponent<AudioSource>().isPlaying){
+						dustEffect.GetComponent<AudioSource> ().Play ();
+					}
 				}
                 else
                 {
                     dir = Vector3.zero;
 					dustEffect.Stop ();
+					dustEffect.GetComponent<AudioSource> ().Stop ();
                 }
 			}
 		}
@@ -198,6 +202,8 @@ public class Player : MonoBehaviour {
 
 	public IEnumerator AttackDelay(float time){
 		isReloading = true;
+
+		dustEffect.GetComponent<AudioSource> ().Stop ();
 
 		Debug.Log ("Reloading");
 
@@ -234,6 +240,7 @@ public class Player : MonoBehaviour {
 			MouseInputProcess ();
 		} else {
 			StartCoroutine ("Damaged", 0.5f);
+			dustEffect.GetComponent<AudioSource> ().Stop ();
 		}
 	}
 }
